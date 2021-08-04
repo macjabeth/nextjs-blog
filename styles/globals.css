@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .posts ul {
+    @apply list-disc my-2 ml-5;
+  }
+}

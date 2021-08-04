@@ -30,12 +30,18 @@ export default function Layout({ children, home }) {
             <Image
               priority
               src="/images/profile.jpg"
-              className={'rounded-full'}
+              className={"rounded-full"}
               height={144}
               width={144}
               alt={name}
             />
-            <h1 className={'text-4xl leading-6 font-extrabold tracking-tighter my-4'}>{name}</h1>
+            <h1
+              className={
+                "text-4xl leading-6 font-extrabold tracking-tighter my-4"
+              }
+            >
+              {name}
+            </h1>
           </>
         ) : (
           <>
@@ -44,16 +50,16 @@ export default function Layout({ children, home }) {
                 <Image
                   priority
                   src="/images/profile.jpg"
-                  className={'rounded-full'}
+                  className={"rounded-full"}
                   height={108}
                   width={108}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={'text-2xl leading-6 my-4'}>
+            <h2 className={"text-2xl leading-6 my-4"}>
               <Link href="/">
-                <a className={'text-current'}>{name}</a>
+                <a className={"text-current"}>{name}</a>
               </Link>
             </h2>
           </>
@@ -63,7 +69,9 @@ export default function Layout({ children, home }) {
       {!home && (
         <div className="mt-12">
           <Link href="/">
-            <a>&larr; Back to home</a>
+            <a className="text-blue-500 hover:text-blue-700">
+              &larr; Back to home
+            </a>
           </Link>
         </div>
       )}
